@@ -14,9 +14,9 @@ public class Wall : MonoBehaviour
         
     }
 
-    void OnTriggerEnter(Collider Ball)
+    void OnTriggerEnter(Collider ball)
     {
         // Cambiar dirección de la bola
-        Ball.gameObject.GetComponent<Ball>().speedY *= -1;
+        ball.gameObject.GetComponent<Ball>().speedY *= -1;
     }
 }
