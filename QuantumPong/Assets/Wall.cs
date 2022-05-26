@@ -2,10 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Wall : MonoBehaviour
+public class Borders : MonoBehaviour
 {
+    GameObject SoundManager;
+    SoundManager SoundManagerScript;
     void Start()
     {
+        SoundManager = GameObject.Find("SoundManager");
+        SoundManagerScript = SoundManager.GetComponent<SoundManager>();
+
         
     }
 
@@ -16,7 +21,8 @@ public class Wall : MonoBehaviour
 
     void OnTriggerEnter(Collider ball)
     {
-        // Cambiar dirección de la bola
-        ball.gameObject.GetComponent<Ball>().speedY *= -1;
+        ball.gameObject.GetComponent<Ball>().sY *= -1;
+        SoundManagerScript.wallSound.pitch = 1;
+        SoundManagerScript.wallSound.Play();
     }
 }

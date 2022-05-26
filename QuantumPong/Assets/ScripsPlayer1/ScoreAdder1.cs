@@ -13,10 +13,16 @@ public class ScoreAdder1 : MonoBehaviour
     public GameObject ball;
     GameObject BallManager;
     BallManager BallmanagerScript;
+    GameObject SoundManager;
+    SoundManager SoundManagerScript;
+
+
     void Start()
     {
         BallManager = GameObject.Find("BallManager");
         BallmanagerScript = BallManager.GetComponent<BallManager>();
+        SoundManager = GameObject.Find("SoundManager");
+        SoundManagerScript = SoundManager.GetComponent<SoundManager>();
 
     }
     void Update()
@@ -34,6 +40,8 @@ public class ScoreAdder1 : MonoBehaviour
        score.text = PlayerScore1.ToString();
        BallmanagerScript.rightGetPoint = true;
        BallmanagerScript.leftGetPoint = false;
+       SoundManagerScript.scoreSound.Play();
+
 
 
        if(end == false)

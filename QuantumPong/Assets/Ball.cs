@@ -4,28 +4,29 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public float speedX = 3;
-    public float speedY = 3;
+    public float sX = 3;
+    public float sY = 3;
+    public bool firstRound = true;
 
     void Start()
     {
-        // Determinar aleatoriamente la dirección inicial de la bola
         int initialX = Random.Range(0, 2);
         int initialY = Random.Range(0, 2);
-
+     
         if (initialX == 0)
         {
-            speedX *= -1;
+            sX *= -1;
         }
         if (initialY == 0)
         {
-            speedY *= -1;
+            sY *= -1;
         }
-    }
-
+        firstRound = false;
+     }
+    
     void Update()
     {
-        // Mover la bola
-        transform.Translate(new Vector3(speedX, speedY, 0) * Time.deltaTime);
+        
+        transform.Translate(new Vector3(sX, sY, 0) * Time.deltaTime);
     }
 }
