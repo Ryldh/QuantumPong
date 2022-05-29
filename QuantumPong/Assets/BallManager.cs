@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BallManager : MonoBehaviour
 {
-    public bool firstround = true;
+    public bool firstRound = true;
     public bool leftGetPoint = false;
 
     public bool rightGetPoint = false;

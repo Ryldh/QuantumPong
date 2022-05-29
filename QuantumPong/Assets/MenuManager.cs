@@ -5,16 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+
     void Start()
     {
-        
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+      
     }
     public void Exit()
     {
@@ -28,7 +29,6 @@ public class MenuManager : MonoBehaviour
         }
 public void PlayerVSIA()
         {
-             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +2);
              print("Todavía no hace nada.");
 
         }

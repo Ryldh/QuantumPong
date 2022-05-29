@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ScoreAdder2 : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class ScoreAdder2 : MonoBehaviour
        if(PlayerScore2 == 9)
        {
            end = true;
+           SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +2);
        }
     }
     

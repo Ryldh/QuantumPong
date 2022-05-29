@@ -14,12 +14,12 @@ public class BallMovement : MonoBehaviour
     {
             BallManager = GameObject.Find("BallManager");
             BallManagerScrip = BallManager.GetComponent<BallManager>();
-            if(BallManagerScrip.firstround == true)
+            if(BallManagerScrip.firstRound == true)
             {
                 float sx = Random.Range (0, 2) == 0 ? -1 : 1;
                 float sy = Random.Range (0, 2) == 0 ? -1 : 1;
                 GetComponent<Rigidbody>().velocity = new Vector3(speed * sx, speed * sy, 0f);
-                BallManagerScrip.firstround = false;
+                BallManagerScrip.firstRound = false;
             }
             if(BallManagerScrip.leftGetPoint == true)
                 {

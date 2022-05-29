@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ScoreAdder1 : MonoBehaviour
 {
     public TextMeshProUGUI score;
-    int PlayerScore1 = 0;
+    public int PlayerScore1 = 0;
     public bool end = false;
     Vector3 origen = new Vector3 (0, 0, -0.187f);
     public GameObject ball;
@@ -30,6 +31,7 @@ public class ScoreAdder1 : MonoBehaviour
        if(PlayerScore1 == 9)
        {
            end = true;
+           SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
        }
     }
     
